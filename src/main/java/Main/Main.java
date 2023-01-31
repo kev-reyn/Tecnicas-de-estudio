@@ -15,6 +15,8 @@ import java.util.List;
 
 public class Main {
 int x = y;
+//el static se usa para cuando una variable es accesible
+    //para toda la clase
 static int y = 10;
 
     public static void main(String args []) throws IOException {
