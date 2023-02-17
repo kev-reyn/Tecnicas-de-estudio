@@ -13,23 +13,66 @@ import java.util.Arrays;
 import java.util.List;
 
 
+interface ex {
+    public default int getSpeed(){
+        return 5;
+    }
+}
+interface ex2 {
+    public default int getSpeed(){
+        return 10;
+    }
+}
+
+class A implements ex, ex2{
+    A(){
+        System.out.println("CP");
+    }
+    {System.out.println("SP");}
+    protected void method(){
+        System.out.println("Animal run");
+    }
+
+    @Override
+    public int getSpeed() {
+        return 6;
+    }
+
+}
+
+class B extends A {
+    B(){
+        System.out.println("CT");
+    }
+    {System.out.println("IT");}
+    public final void method(){
+        System.out.println("dog runs");
+    }
+}
+
 public class Main {
-int x = y;
 //el static se usa para cuando una variable es accesible
     //para toda la clase
-static int y = 10;
+static int x1 = 9;
+static int z;
+
 
     public static void main(String args []) throws IOException {
+        int x = 5, y = 10;//pr1=0b1,pr2=0xf,pr3=018;
+        int a = 10;
+        Integer wi = 10;
+        Double aDouble = 10.0;
+        System.out.println(aDouble == a);
+        System.out.println(y/=x);
+        System.out.println(x1+z);
+        long aLong = 0x99;
+        System.out.println(aLong);
+        final int x1 = 10;
+        final int f1 = 0;
+        final int f2 = 2;
         //InvertirCadena invertirCadena = new InvertirCadena();
         Main main = new Main();
-        //main.ChapterOne();
-
-        /*String[] strings = {"N","L","n","O","S"};
-        Arrays.sort(strings);
-        for (String s: strings
-             ) {
-            System.out.println(s);
-        }*/
+        //main.ChapterFour();
 
         /*Integer[] a1 = {2,-1,4,5,3};
         Integer[] a2 = {2,-1,4,5,3};
@@ -92,13 +135,99 @@ static int y = 10;
 
         System.out.println(s.toString().equals(s2.toString()));
 
-         */
-        short c = 128;
-        System.out.println(c);
+        //hacer metodo para mostrar todas las formas d eun array
+
+
+        int[] nums = {0,1,2,3,4};
+        for (int x:nums){
+            System.out.println(x);
+            continue;
+            System.out.println(x+Main.x);
+        }
+
+        int z = 20;
+        while (z>0){
+            do {
+                z-=2;
+            } while (z>5);
+            z--;
+            System.out.println(z);
+        }
+
+                while (z>0){
+            int z = 20;
+            do {
+                z-=2;
+            } while (z>5);
+            z--;
+            System.out.println(z);
+        }
+
+                switch (f1+f2){
+            case f1 : {System.out.println("A");}
+            case 1 : System.out.println("b");
+            default : System.out.println("def"); break;
+            case f2 : System.out.println("c");
+        }
+
+        f1 = 0;
+        switch (f1+f2){
+            case f1 : {System.out.println("A");}
+            case 1 : System.out.println("b");
+            default : System.out.println("def"); break;
+            case f2 : System.out.println("c");
+        }
+
+                if(6>6){
+            System.out.println("a");
+            System.out.println("b");}
+        System.out.println();
+            else {
+                System.out.println("s");
+        }
+
+                System.out.println(""+1+2);
+        System.out.println(""+(1+2));
+
+                System.out.println(true ^ (false | true));
+
+        A a = new B();
+        a.method();
+
+
+        int a = 1_000;
+        int b = 012;
+        int c = 0B01;
+        int d = 0X3;
+
+        System.out.println(013);
+
+        final int [] ints = new int[3];
+        int len = ints.length;
+        ints[1]++;
+        for (int i : ints)
+            System.out.println(i);
+
+
+        int [][] ints = new int[3][2];
+        ints[0] = new int[3];
+        ints[2] = {1,2,3};
+        System.out.println(ints[0].length + ints[2].length);
+
+                int [] ints = {2,-1,4,5,3};
+        Arrays.sort(ints);
+        System.out.println(Arrays.binarySearch(ints,-1));
+*/
 
     }
 
-    public void print(){
+    /**
+     *
+     * @param i
+     */
+
+
+    public void print(final int i){
         try {
             throw new NullPointerException();
         } catch (ClassCastException e){
@@ -109,7 +238,7 @@ static int y = 10;
         System.out.println("OCA");
     }
 
-    public static void method()throws IOException{
+    public static void method()throws Exception{
         throw new FileNotFoundException();
     }
 

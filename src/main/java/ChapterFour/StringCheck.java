@@ -8,6 +8,8 @@ package ChapterFour;
 //This value variable is marked as final in the class String. Note that final is a
 //non-access modifier, and a final variable can be initialized only once.
 
+import java.util.Arrays;
+
 //None of the methods defined in the class String manipulate the individual elements
 //of the array value.
 public class StringCheck {
@@ -64,7 +66,12 @@ public class StringCheck {
         StringBuffer stringBuffer1 = new StringBuffer("String Buffer");
         String string2 = new String(stringBuffer1);
         
-
+        String[] strings = {"N","L","n","O","S"};
+        Arrays.sort(strings);
+        for (String s: strings
+             ) {
+            System.out.println(s);
+        }
 
 
 
