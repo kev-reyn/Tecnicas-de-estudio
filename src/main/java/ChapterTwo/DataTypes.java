@@ -1,5 +1,5 @@
 package ChapterTwo;
-
+import static Main.Main.x1;
 public class DataTypes {
     //DATA TYPES
     //Class level variables must be declared and initialized at same time
@@ -16,11 +16,20 @@ public class DataTypes {
     double aDouble = 0.0;
     // OR
     double aDouble2 = 0.0D;
+    double z= aDouble2+anInt;
 
     char aChar = '\u0000'; //Must be whit ' ' and not " "
 
-    boolean aBoolean = false;
+    Boolean aBoolean = false;
 
     Object object = null;
+
+
+
+
+    public void myMethod(){
+        System.out.println(x1);
+        Character.valueOf('s');
+    }
 
 }

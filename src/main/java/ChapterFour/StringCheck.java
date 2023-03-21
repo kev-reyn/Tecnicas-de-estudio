@@ -9,10 +9,17 @@ package ChapterFour;
 //non-access modifier, and a final variable can be initialized only once.
 
 import java.util.Arrays;
+import java.util.List;
 
 //None of the methods defined in the class String manipulate the individual elements
 //of the array value.
 public class StringCheck {
+
+    int a;
+
+    public StringCheck(){
+
+    }
 
     //Because String is a class,
     // you can assign null to it,
@@ -72,7 +79,14 @@ public class StringCheck {
              ) {
             System.out.println(s);
         }
+    }
 
+    public void StringMethods (String stringToSplit){
+        //String[] splitedString = stringToSplit.split(" ");
+        //List<String> list = Arrays.asList(splitedString);
+
+        List<String> list = Arrays.asList(stringToSplit.split(" "));
+        System.out.println(list.get(0));
 
 
     }

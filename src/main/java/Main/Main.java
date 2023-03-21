@@ -2,15 +2,9 @@ package Main;
 
 import ChapterFour.StringCheck;
 import ChapterOne.Basics;
-import Ejercicios.InvertirCadena;
-import Ejercicios.Operators;
-import static java.util.Arrays.*;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 
 interface ex {
@@ -50,15 +44,18 @@ class B extends A {
     }
 }
 
-public class Main {
+public class Main implements interfaceA {
 //el static se usa para cuando una variable es accesible
     //para toda la clase
-static int x1 = 9;
-static int z;
+public static int x1;
+static String z;
+static double d;
+static char c;
+int y =10;
 
 
     public static void main(String args []) throws IOException {
-        int x = 5, y = 10;//pr1=0b1,pr2=0xf,pr3=018;
+        /*int x = 5, y = 10;//pr1=0b1,pr2=0xf,pr3=018;
         int a = 10;
         Integer wi = 10;
         Double aDouble = 10.0;
@@ -70,9 +67,9 @@ static int z;
         final int x1 = 10;
         final int f1 = 0;
         final int f2 = 2;
+
+         */
         //InvertirCadena invertirCadena = new InvertirCadena();
-        Main main = new Main();
-        //main.ChapterFour();
 
         /*Integer[] a1 = {2,-1,4,5,3};
         Integer[] a2 = {2,-1,4,5,3};
@@ -218,6 +215,19 @@ static int z;
         Arrays.sort(ints);
         System.out.println(Arrays.binarySearch(ints,-1));
 */
+        int x;
+        double aDouble2 = 0.0D;
+        x = 10;
+        Integer i1 = Integer.decode("10");
+        Integer i2 = Integer.decode("20");
+        Integer i3 = Integer.decode("30");
+        System.out.println(aDouble2);
+
+        if(x==10) x=11;
+        System.out.println(x);
+
+        System.out.println(interfaceA.x);
+
 
     }
 
@@ -255,7 +265,7 @@ static int z;
 
     public void ChapterFour(){
         StringCheck stringCheck = new StringCheck();
-        stringCheck.declarations();
+        stringCheck.StringMethods("Juan Perez");
     }
 
 }
